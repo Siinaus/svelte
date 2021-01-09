@@ -65,3 +65,9 @@ npm i --save-dev prettier-plugin-svelte prettier
 ```
 
 Näillä päästään alkuun!
+
+Sovellus käynnistyy komennolla:
+
+```
+npm run dev
+```
