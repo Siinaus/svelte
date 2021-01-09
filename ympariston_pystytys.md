@@ -4,8 +4,8 @@
 
 Ensin laitetaan kehitysympärisö kuntoon. Tähän tarvitaan:
 
-- [VSCode] (https://code.visualstudio.com/)
-- [NodeJS] (https://nodejs.org/en/)
+- [VSCode](https://code.visualstudio.com/)
+- [NodeJS](https://nodejs.org/en/)
 
 Luo koneellesi kansio, johon tulet luomaan tulevan projektisi, esim. Frontend.
 
@@ -51,10 +51,12 @@ Tai avaamalla VSCoden yläkulmasta File -> Open Folder ja avaamalla siellä ekap
 
 Jotta koodaaminen olisi helpompaa, asennetaan VS Codeen pari lisäosaa:
 
-** Svelte for VS Code **
+**Svelte for VS Code**
+
 <img src="./Kuvat/Ymparisto/svelte_lisaosa.PNG">
 
-** Prettier **
+**Prettier**
+
 <img src="./Kuvat/Ymparisto/prettier_lisaosa.PNG">
 Prettier ei alunperin ole luotu tukemaan Svelteä, joten joudumme laittamaan terminaaliin vielä komennon:
 
