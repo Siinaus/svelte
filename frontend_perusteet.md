@@ -8,7 +8,7 @@ Frontend-kehittäminen on siis käyttöliittymän kehittämisestä. Kehitystyö 
 
 ## Miten käyttöliittymää kehitetään?
 
-Vanha tapa on luoda sovellukseen omat HTML-, CSS- ja JS-tiedostot, jotka linkitetään yhteen. Jokainen sivunäkymä on oma HTML-tiedosto, jolla on oltava HTML-rakenne (<!DOCTYPE html> <html> <head> <body>). Alla on koodin pätkä HTML-tiedoston head-tagin sisällöstä.
+Vanha tapa on luoda sovellukseen omat HTML-, CSS- ja JS-tiedostot, jotka linkitetään yhteen. Jokainen sivunäkymä on oma HTML-tiedosto, jolla on oltava HTML-rakenne (!DOCTYPE, html, html, head, body jne. tagit). Alla on koodin pätkä HTML-tiedoston head-tagin sisällöstä.
 
 ```html
 <head>
@@ -21,7 +21,6 @@ Vanha tapa on luoda sovellukseen omat HTML-, CSS- ja JS-tiedostot, jotka linkite
   <!--NÄMÄ LINKITYKSET LINKITTÄVÄT HTML-SIVUUN CSS-TIEDOSTON MUOTOILUT JA JAVASCRIPTIN TOIMINNALLISUUDET -->
   <link href="kissimissi_muotoilut.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="snowstorm.js"></script>
-  <!--JavaScript-koodi joka lisää sivustolle lumisateen-->
 </head>
 ```
 
@@ -41,7 +40,7 @@ Kun luo uuden framework-projektin, framework luo automaattisesti sovellukselle p
 
 Alla olevassa kuvassa näkyy mitä vastaluodussa frameworkissa on.
 <img src="./Kuvat/Perusteet/framework_rakenne.PNG">
-Koko sovelluksessa on vain tämä yksi HTML-tiedoston rakenne. Varmaan huomasit, että body-tagien sisältö on tyhjä. Normaalisti siihen alettaisiin koota sisältöä kuten nav, main, div, footer jne. Frameworkeissa tämä sisältö kootaan sovellukseen luoduista komponenteista.
+Koko sovelluksessa on vain tämä yksi HTML-tiedoston rakenne. Varmaan huomasit, että body-tagien sisältö on tyhjä. Normaalisti siihen alettaisiin koota sisältöä eri tagien sisäällä kuten nav, main, div, footer jne. Frameworkeissa tämä sisältö kootaan sovellukseen luoduista komponenteista.
 
 <img src="./Kuvat/Perusteet/komponentti.PNG">
 Komponentti koostuu omasta HTML-osuudesta, joka on vain tietty pätkä HTML-koodia. Koska public-kansion index.html-tiedostossa on jo pakollinen HTML-rakenne, mutta ei sisältöä body-tagien sisällä, komponentissa on siihen tuleva sisältö. Tässä tapauksessa main-tagien sisällä oleva sisältö.
@@ -50,4 +49,15 @@ Javascript on perinteisesti script-tagien sisällä.
 
 Lisäksi komponentissa on oma CSS-osuus, joka muotoilee vain tämän kyseisen komponentin sisältöä. Jos tahtoo tehdä muotoiluita, jotka kattavat koko sovelluksen, ne kannattaa tehdä public-kansion global.css-tiedostoon.
 
-**HUOM!** Koska frameworkejä on erilaisia, komponenttien rakenne vaihtelee myös. Joissain komponentti on vain yksi tiedosto, joka pitää sisällään HTML, CSS ja JavaScript-osuudet, kuten tässä esimerkissä. Toisissa frameworkeissä komponetti saattaa olla oma kansionsa, jonka sisällä on erikseen tiedostot näille kolmelle osiolle.
+**HUOM!** Koska frameworkejä on erilaisia, komponenttien rakenne vaihtelee myös niiden välillä. Joissain komponentti on vain yksi tiedosto, joka pitää sisällään HTML, CSS ja JavaScript-osuudet, kuten tässä esimerkissä. Toisissa frameworkeissä komponetti saattaa olla oma kansionsa, jonka sisällä on erikseen tiedostot näille kolmelle osiolle.
+
+## Frameworkit luovat SPA-sovelluksia
+
+Syvennytään hieman enemmän frameworkien logiikkaan.
+Koska framework luo vain yhden HTML-rungon, jonka sisältä muuttuu vain aina käytettävien komponenttien mukaan, tällaisia sovelluksia kutsutaan SPA-sovelluksiksi. SPA on lyhenne sanoista Single Page Application eli yhden sivun sovellus.
+
+SPA-sovellukset toimivat selaimessa. Selaimeen ladataan koko sovellus, jolloin sovelluksen sivuja ei tarvitse hakea palvelimelta kesken sovelluksen käytön. Vain näytettävä tieto vaihtuu sovellusta käytettäessä. Tämä nopeuttaa ja helpottaa sovelluksen käyttöä. Tosin SPA-sovellusten heikkoutena on ensimmäisen latauksen hitaus, jossa koko sovellus ladataan selaimelle.
+
+Materiaalin alussa mainittu klassinen sovellus on nimeltaan Multi Page Application (MPA) eli monisivuinen sovellus. Näissä, aina kun vaihdetaan sivua, joudutaan lataamaan koko sivu uudestaan. Nimensä mukaisesti, näissä luodaan joka sivulle oma HTML-runko eli sivuja tulee olemaan tämän myötä useampi (esimerkiksi se alussa mainittu 10 kpl). Jos käyttäjä saapuu etusivulle, sovellus lataa vain etusivun, ei muuta. Klikatessaan itsensä seuraavalle sivulle, sovellus kutsuu palvelimelta jälleen vain kyseisen sivun jne.
+
+Sovelluksen lopullinen käyttötarkoitus määrittää onko järkevämpää käyttää SPA vai MPA menetelmää sovelluskehityksessä. Siinä missä SPA-sovellukset ovat nopeita ja helppoja käyttäjälle, MPA-sovellukset ovat turvallisempia ja niitä on helpompi optimoida hakukoneita varten.
