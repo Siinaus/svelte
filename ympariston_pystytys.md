@@ -61,11 +61,11 @@ Jotta koodaaminen olisi helpompaa, asennetaan VS Codeen pari lisäosaa:
 
 Jotta lintteri saadaan toimimaan, täytyy VSCoden asetuksiin tehdä hieman lisäyksiä.
 
-<img src="./Kuvat/Ymparisto/asetukset.PNG">
+<img src="./Kuvat/Ymparisto/asetukset.png">
 
 Haetaan asetuksista tiedosto `settings.json` ja avataan se muokkauksia varten.
 
-<img src="./Kuvat/Ymparisto/settings_json.PNG">
+<img src="./Kuvat/Ymparisto/settings_json.png">
 
 Lisää `settings.json`-tiedostoon seuraavat rivit:
 
