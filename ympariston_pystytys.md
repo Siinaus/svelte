@@ -78,7 +78,7 @@ Lisää `settings.json`-tiedostoon seuraavat rivit:
 
 <img src="./Kuvat/Ymparisto/lisays.PNG">
 
-Seuraavaksi annetaan terminaaliin komento:
+Seuraavaksi annetaan terminaaliin komennot:
 
 ```bash
  npm i
@@ -117,7 +117,7 @@ module.exports = {
 
 Näillä päästään alkuun!
 
-**HUOM!** Jos ESLint ei lähde toimimaan palaa luomaasi `.eslintrc.js`-tiedostoon. Jos module-sana on alleviivattuna, sinun tulee antaa lupa modulen sisällölle lupa toimia projektissa. Alleviivauksen vieressä pitäisi olla pieni hehkulamppuikoni, jota painamalla pääset valitsemaan oikeuksien antamisesta. Anna modulelle oikeudet toimia koko projektissa.
+> **HUOM!** Jos ESLint ei lähde toimimaan palaa luomaasi `.eslintrc.js`-tiedostoon. Jos module-sana on alleviivattuna, sinun tulee antaa lupa modulen sisällölle lupa toimia projektissa. Alleviivauksen vieressä pitäisi olla pieni hehkulamppuikoni, jota painamalla pääset valitsemaan oikeuksien antamisesta. Anna modulelle oikeudet toimia koko projektissa.
 
 Sovellus käynnistyy komennolla:
 
